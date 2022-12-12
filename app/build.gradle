@@ -1,0 +1,103 @@
+buildscript {
+    apply from: "$rootDir/build_config/dependencies.gradle"
+}
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'org.jetbrains.kotlin.plugin.serialization'
+    id 'com.google.devtools.ksp'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.user.posts'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.user.posts"
+        minSdk 23
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    // AndroidX
+    implementation coreKtx
+    implementation appCompat
+    implementation fragmentKtx
+    implementation activityKtx
+
+    implementation kotlinStdLib
+
+    // UI components
+    implementation material
+    implementation constraint
+    implementation recycler
+    implementation swipeToRefresh
+    implementation viewbinding
+
+    // Jetpack
+    implementation viewmodel
+
+    // Serialization
+    implementation serialization
+    implementation serializationConverter
+
+    // Image loading
+    implementation glide
+    implementation glideCompiler
+
+    // Network
+    implementation retrofit.values()
+
+    // Async
+    implementation coroutines
+
+    // DI
+    implementation hilt
+    kapt hiltCompiler
+
+    // DB
+    implementation roomRuntime
+    implementation roomExtensions
+    ksp roomCompiler
+
+    // Navigation
+    implementation navigationComponent
+    implementation navigationUi
+
+    // KSP
+    implementation ksp
+
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.4")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")
+}
