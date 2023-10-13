@@ -1,0 +1,48 @@
+{
+    "result": {
+        "items": [
+            {
+                "symbol": "SWTR",
+                "image": "https://panel.swisstronik.com/media/network_images/swisstronik.png",
+                "balance": 1.01,
+                "equaivalent": 3.01,
+                "tag": "Native"
+                
+            },
+            {
+                "symbol": "BTC",
+                "image": "https://panel.swisstronik.com/media/network_images/bitcoin.png",
+                "balance": 0.01234,
+                "equaivalent": 3801.51,
+                "tag": "Native"
+                
+            },
+            {
+                "symbol": "USDT",
+                "image": "https://panel.swisstronik.com/media/network_images/ethereum-eth-logo.png",
+                "balance": 50.00,
+                "equaivalent": 50.00,
+                "tag": "ERC-20"
+                
+            },
+            {
+                "symbol": "USDT",
+                "image": "https://panel.swisstronik.com/media/network_images/logo_Pw7eW5a.png",
+                "balance": 2.00,
+                "equaivalent": 1.99,
+                "tag": "TRC-20"
+                
+            },
+            {
+                "symbol": "USDC",
+                "image": "https://panel.swisstronik.com/media/network_images/ethereum-eth-logo.png",
+                "balance": 55.23,
+                "equaivalent": 54.1,
+                "tag": "ERC-20"
+                
+            }
+        ]
+    },
+    "success": true,
+    "errors": []
+}
